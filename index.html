@@ -1,0 +1,137 @@
+<!-- 
+  Написано Александром васильевым vk.com/stylelifeweb.wyndace
+  Группа вк: vk.com/wynyard_official
+-->
+
+<!DOCTYPE html>
+<!-- Язык сайта -->
+<html lang="ru">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlexBox Laboratory by WynYard</title>
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- НАЧАЛО: боковая панель -->
+    <aside class="sidepanel">
+      <h2>Настройки</h2>
+      <hr>
+
+      <h3>Блоки</h3>
+
+      <!-- ПОЛЕ ВВОДА ВЫСОТЫ БЛОКОВ -->
+      <label for="width">width:</label>
+      <input v-model="wi" type="number" value="100" id="width">
+
+      <!-- ПОЛЕ ВВОДА ШИРИНЫ БЛОКОВ -->
+      <label for="height">height:</label>
+      <input v-model="hi" type="number" value="100" id="height">
+
+
+      <h3>Контейнер</h3>
+
+      <!-- СПИСОК ЗНАЧЕНИЙ justify-content -->
+      <label for="jcontent">justify-content:</label>
+      <select v-model="jc" id="jcontent">
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+      </select>
+
+
+      <!-- ПЕРЕКЛЮЧАТЕЛЬ FLEXBOX -->
+      <input v-model="df" true-value="flex" false-value="block" type="checkbox" id="dflex" checked>
+      <label for="dflex">display: flex,</label>
+
+      <!-- ПЕРЕКЛЮЧАТЕЛЬ FLEX-WRAP -->
+      <input v-model="fw" true-value="wrap" false-value="nowrap" type="checkbox" id="fwrap" checked>
+      <label for="fwrap">flex-wrap: wrap</label>
+    </aside>
+    <!-- КОНЕЦ: боковая панель -->
+
+
+
+    <!-- НАЧАЛО: область результата -->
+    <main class="content">
+      <h2>Результат</h2>
+
+      <!-- FLEX-КОНТЕЙНЕР -->
+      <div v-bind:style="{justifyContent: jc, display: df, flexWrap: fw}" class="wrapper">
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+        <div v-bind:style="{width: wi + 'px', height: hi + 'px'}" class="item">{{ wi }}x{{hi}}
+        </div>
+      </div>
+    </main>
+    <!-- КОНЕЦ: область результата -->
+  </div>
+
+  <!-- <script src="./js/script.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </script>
+  <script>
+    let app = new Vue({
+      el: '#app',
+      data: {
+        wi: "100",
+        hi: "100",
+        jc: "flex-start",
+        df: "flex",
+        fw: "wrap"
+      }
+    })
+  </script>
+</body>
+
+</html>
+
+<!-- 
+  Написано Александром васильевым vk.com/stylelifeweb.wyndace
+  Группа вк: vk.com/wynyard_official
+-->
